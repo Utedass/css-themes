@@ -1,6 +1,13 @@
 /* Reset to unify different browsers unique styling */
 @import 'style-resets.css';
 
+
+/* The themes only affect text color and background color as of yet, but one can put any CSS properties here really */
+
+/* Also, a weakness that I realize now is that you can never override a theme with the default theme,
+say you have theme "alt1" active, and want to style a div with the default theme. There is no way currently.
+Should probably make the default theme a named theme and apply that by default somehow. */
+
 /* Default theme */
 :root {
 	--bg-light: #68c3ff;
