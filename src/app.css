@@ -1,3 +1,6 @@
+/* Reset to unify different browsers unique styling */
+@import 'style-resets.css';
+
 /* Default theme */
 :root {
 	--bg-light: #68c3ff;

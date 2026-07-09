@@ -15,3 +15,5 @@
 </pre>
 
 <a href="https://google.com">Go to google!</a>
+
+<p>And here is some other text that also get affected by the current global theme.</p>

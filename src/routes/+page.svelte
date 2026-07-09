@@ -1,26 +1,29 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import Text from '$lib/components/Text.svelte';
+	import { mode, toggleMode } from '$lib/mode-watcher';
 </script>
 
-<Text greger="banan" class="sten">Men vi måste ju ha nåt här..</Text>
+<button onclick={toggleMode}>Toggle</button>
 
-<div class="sten">En annan div</div>
+<Text greger="banan" class="sten">Det fungerar inte att kasta lokal scopad styling på en komponent.</Text>
+
+<div class="sten">En div där vi kastar om textfärg med bakgrund med lokal scopad svelte-styling.</div>
 
 <div class="themed" data-mode="dark" data-theme="alt">
-	<p>Vi ska försöka ändra på det här..</p>
-	<span>Så att det fungerar där det är <a href={resolve('/')}>tänkt</a></span>
+	<p>Här är lite lokalt temad text</p>
+	<span>Av någon anledning <a href={resolve('/')}>byter länktext färg när man växlar dark/light</a>. Men men..</span>
 </div>
 
 <div class="themed" data-theme="alt2">
-	<p>Vi ska försöka ändra på det här..</p>
-	<span>Så att det fungerar där det är <a href={resolve('/')}>tänkt</a></span>
+	<p>Här är lite lokalt temad text</p>
 </div>
 
 <div class="themed" data-mode="dark" data-theme="alt2">
-	<p>Vi ska försöka ändra på det här..</p>
-	<span>Så att det fungerar där det är <a href={resolve('/')}>tänkt</a></span>
+	<p>Här är lite lokalt temad text</p>
 </div>
+
+<button onclick={() => mode.mode = "dark"}>Släck för fan!</button>
 
 <style>
 	.sten {
