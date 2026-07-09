@@ -36,13 +36,13 @@
 	--fg: var(--fg-light);
 }
 
-/* Overwrite variables by dark mode if enabled */
-[data-mode='dark'] {
+/* Overwrite variables by dark mode if enabled by either setting data-mode="dark" or class="dark" in the <html> tag or any element further down */
+[data-mode='dark'], .dark {
 	--bg: var(--bg-dark);
 	--fg: var(--fg-dark);
 }
 
-/* Apply variables to whatever elements you desire */
+/* Apply variables to the root element, and override whatever elements you desire if you add "themed" as class */
 :root,
 .themed {
 	background-color: var(--bg);
