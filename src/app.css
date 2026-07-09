@@ -1,0 +1,47 @@
+/* Default theme */
+:root {
+	--bg-light: #68c3ff;
+	--fg-light: midnightblue;
+
+	--bg-dark: midnightblue;
+	--fg-dark: #68c3ff;
+}
+
+/* Alternative theme */
+[data-theme='alt'] {
+	--bg-light: lightgreen;
+	--fg-light: darkgreen;
+
+	--bg-dark: darkgreen;
+	--fg-dark: lightgreen;
+}
+
+/* Alternative theme */
+[data-theme='alt2'] {
+	--bg-light: rgb(255, 135, 135);
+	--fg-light: rgb(74, 0, 0);
+
+	--bg-dark: rgb(62, 4, 4);
+	--fg-dark: rgb(133, 92, 92);
+}
+
+/* Apply theme to variables */
+:root,
+[data-theme],
+[data-mode] {
+	--bg: var(--bg-light);
+	--fg: var(--fg-light);
+}
+
+/* Overwrite variables by dark mode if enabled */
+[data-mode='dark'] {
+	--bg: var(--bg-dark);
+	--fg: var(--fg-dark);
+}
+
+/* Apply variables to whatever elements you desire */
+:root,
+.themed {
+	background-color: var(--bg);
+	color: var(--fg);
+}
