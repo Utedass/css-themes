@@ -23,7 +23,8 @@
 	<p>Här är lite lokalt temad text</p>
 </div>
 
-<button onclick={() => mode.mode = "dark"}>Släck för fan!</button>
+<button onclick={() => mode.mode = "dark"}>Släck för fan!</button><br />
+<button onclick={() => mode.mode = "system"}>Gör som alla andra istället!</button>
 
 <style>
 	.sten {
